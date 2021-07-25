@@ -1,0 +1,24 @@
+<mat-accordion class="example-headers-align">
+  <mat-expansion-panel
+    *ngFor="let panel of panels; let index = index; trackBy: trackByFn"
+    [expanded]="step === index"
+    (opened)="step = index"
+    hideToggle
+  >
+    <mat-expansion-panel-header>
+      <mat-panel-title>{{ panel.title }}</mat-panel-title>
+      <mat-panel-description>
+        {{ panel.subtitle }}
+        <mat-icon *ngIf="panel.icon">{{ panel.icon }}</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <ng-content></ng-content>
+
+    <mat-action-row *ngIf="panel?.actions?.length">
+      <button *ngFor="let action of panel.actions; let i = index" mat-button color="primary" (click)="action.action()">
+        {{ action.label }}
+      </button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>

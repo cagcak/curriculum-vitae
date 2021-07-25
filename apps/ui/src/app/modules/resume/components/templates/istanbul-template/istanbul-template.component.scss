@@ -1,0 +1,55 @@
+$inline-size: 1.25rem !default;
+
+.istanbul-template {
+  width: 100%;
+  height: 100%;
+  min-width: 675px;
+  max-width: 875px;
+  overflow: auto;
+
+  & .container {
+    padding: 2rem;
+
+    & ul {
+      padding-inline-start: $inline-size;
+      & li {
+        list-style: none;
+        padding: 6px 0;
+      }
+    }
+
+    & .material-icons {
+      font-size: 16px;
+    }
+
+    & .mat-grid-tile .mat-figure {
+      position: inherit;
+      display: block;
+      align-items: baseline;
+    }
+
+    & .left-tile-content {
+      display: inline-block;
+      padding-left: $inline-size;
+      font-size: small;
+    }
+
+    & .right-tile-content {
+    }
+  }
+}
+
+// canvas {
+//   border: 2px solid rgba(0, 0, 0, 0.12);
+//   transition: 300ms;
+//   border-radius: 4px;
+//   margin-top: 20px;
+//   width: 600px;
+//   max-width: 600px;
+//   min-width: 600px;
+//   height: 90%;
+// }
+
+// canvas:hover {
+//   border: 2px solid rgba(0, 0, 0, 0.54);
+// }

@@ -1,0 +1,68 @@
+<ng-container *ngIf="resumeForm?.value as resume">
+  <form [formGroup]="resumeForm">
+    <div
+      class="content"
+      fxLayout="row wrap"
+      fxFlexAlign="center"
+      fxLayout.xs="column"
+      fxLayoutAlign="space-around"
+      fxLayoutGap.md="20px grid"
+      fxFlexFill
+    >
+      <div fxFlex="50">
+        <div [style.marginBottom]="'50px'" [style.padding]="'0 20px'">
+          <ui-personal-details
+            [resumeId]="(resume$ | async)?._id"
+            [personalDetail]="resume.personalDetail"
+            [formControlName]="CONTROLS.PERSONAL_DETAIL"
+          ></ui-personal-details>
+
+          <ui-professional-summary
+            [professionalSummary]="resume.professionalSummary"
+            [formControlName]="CONTROLS.PROFESSIONAL_SUMMARY"
+          ></ui-professional-summary>
+
+          <ui-employment-history
+            [employmentHistories]="resume.employmentHistories"
+            [formControlName]="CONTROLS.EMPLOYMENT_HISTORIES"
+          ></ui-employment-history>
+
+          <ui-educations [educations]="resume.educations" [formControlName]="CONTROLS.EDUCATIONS"></ui-educations>
+
+          <ui-skills [skills]="resume.skills" [formControlName]="CONTROLS.SKILLS"></ui-skills>
+
+          <ui-courses [courses]="resume.courses" [formControlName]="CONTROLS.COURSES"></ui-courses>
+
+          <ui-languages [languages]="resume.languages" [formControlName]="CONTROLS.LANGUAGES"></ui-languages>
+
+          <ui-references [references]="resume.references" [formControlName]="CONTROLS.REFERENCES"></ui-references>
+
+          <ui-social-links
+            [socialLinks]="resume.socialLinks"
+            [formControlName]="CONTROLS.SOCIAL_LINKS"
+          ></ui-social-links>
+
+          <ui-hobbies [hobbies]="resume.hobbies" [formControlName]="CONTROLS.HOBBIES"></ui-hobbies>
+
+          <ui-custom-sections
+            [customSections]="resume.customSections"
+            [formControlName]="CONTROLS.CUSTOM_SECTIONS"
+          ></ui-custom-sections>
+        </div>
+      </div>
+      <div fxFlex="50">
+        <mat-grid-list cols="4" rowHeight="100px">
+          <!-- <mat-grid-tile
+            *ngFor="let tile of tiles"
+            [colspan]="tile.cols"
+            [rowspan]="tile.rows"
+            [style.background]="tile.color"
+          >
+            {{ tile.content | json }}
+          </mat-grid-tile> -->
+          <curriculum-vitae-live-resume [resumeValue]="resume"></curriculum-vitae-live-resume>
+        </mat-grid-list>
+      </div>
+    </div>
+  </form>
+</ng-container>

@@ -1,0 +1,43 @@
+<ui-section-header [title]="title" [subtitle]="subtitle"></ui-section-header>
+
+<form [formGroup]="form">
+  <mat-accordion *ngIf="formArray.controls" [formArrayName]="formArrayName">
+    <ng-container
+      *ngFor="let control of formArray.controls; let i = index; let c = count; let last = last; trackBy: trackByFn"
+      [formGroupName]="i"
+    >
+      <mat-expansion-panel [expanded]="control.value.config.expanded" (opened)="setStep(i)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <p>{{ control.value[PROPS.TEXT] }}</p>
+          </mat-panel-title>
+          <!-- <mat-panel-description>
+          </mat-panel-description> -->
+        </mat-expansion-panel-header>
+
+        <div class="mat-expansion-panel-body">
+          <ui-free-text-input
+            [label]="PROPS.TEXT"
+            [formControlName]="PROPS.TEXT"
+            formControlErrors
+          ></ui-free-text-input>
+        </div>
+
+        <mat-action-row>
+          <button *ngIf="c > 1" mat-raised-button color="warn" aria-label="delete icon" (click)="formArray.removeAt(i)">
+            <mat-icon>delete</mat-icon> Delete Item
+          </button>
+        </mat-action-row>
+      </mat-expansion-panel>
+      <button
+        *ngIf="last"
+        mat-raised-button
+        color="accent"
+        style="width: 100%"
+        (click)="insertItem(null, i + 1, { config: { expanded: true } })"
+      >
+        <mat-icon>add</mat-icon> Add Item
+      </button>
+    </ng-container>
+  </mat-accordion>
+</form>

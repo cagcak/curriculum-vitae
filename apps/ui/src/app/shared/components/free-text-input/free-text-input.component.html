@@ -1,0 +1,20 @@
+<mat-form-field *ngIf="formControlName?.control as control" class="example-full-width" appearance="fill">
+  <mat-label>{{ label | sentence }}</mat-label>
+  <textarea
+    matInput
+    [placeholder]="placeholder || label"
+    [attr.name]="inputName || label"
+    [attr.aria-label]="label"
+    [attr.cols]="cols"
+    [attr.disabled]="disabled"
+    [attr.minlength]="minlength"
+    [attr.maxlength]="maxlength"
+    [attr.rows]="rows"
+    [attr.wrap]="wrap"
+    [formControl]="control"
+    [errorStateMatcher]="matcher"
+  >
+    {{ text }}
+  </textarea>
+  <mat-error [formControlError]="formControlErrors">{{ formControlErrorMessage }}</mat-error>
+</mat-form-field>

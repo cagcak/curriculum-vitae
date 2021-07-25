@@ -1,0 +1,43 @@
+<h3 mat-dialog-title>Edit photo</h3>
+<div mat-dialog-content>
+  <figure>
+    <img height="200" width="200" [attr.src]="avatarSource" alt="avatar" />
+    <figcaption>Avatar photo</figcaption>
+  </figure>
+</div>
+<mat-form-field>
+  <mat-label *ngIf="selectedFiles && selectedFiles.item(0); else newFile">{{ selectedFiles.item(0).name }}</mat-label>
+  <ng-template #newFile>
+    <mat-label>Choose file</mat-label>
+  </ng-template>
+  <input matInput disabled />
+  <button
+    *ngIf="selectedFiles?.length"
+    mat-icon-button
+    matSuffix
+    color="warn"
+    aria-label="clear"
+    [attr.disabled]="!selected"
+    (click)="clearInput($event, fileInput)"
+  >
+    <mat-icon>clear</mat-icon>
+  </button>
+  <button mat-icon-button matSuffix color="accent" aria-label="add" (click)="fileInput.click()">
+    <mat-icon>attach_file</mat-icon>
+  </button>
+  <input hidden (change)="selectFile($event)" #fileInput type="file" id="file" [attr.accept]="accept" />
+</mat-form-field>
+<div mat-dialog-actions>
+  <button mat-dialog-close mat-stroked-button color="accent" aria-label="close">
+    <mat-icon>close</mat-icon> Close
+  </button>
+  <button
+    mat-raised-button
+    color="primary"
+    aria-label="save"
+    [disabled]="!fileInput.value"
+    (click)="uploadAvatar(selectedFiles.item(0))"
+  >
+    <mat-icon>save</mat-icon> Save and Close
+  </button>
+</div>

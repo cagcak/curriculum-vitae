@@ -1,0 +1,21 @@
+<div class="preview-container" *ngIf="resumeValue">
+  <ng-container [ngSwitch]="activeTemplate">
+    <ng-container *ngSwitchCase="TEMPLATES.ISTANBUL_TEMPLATE.name">
+      <ng-container *ngComponentOutlet="TEMPLATES.ISTANBUL_TEMPLATE.component; injector: injector"></ng-container>
+    </ng-container>
+    <ng-container *ngSwitchCase="TEMPLATES.ANKARA_TEMPLATE.name">
+      <ng-container *ngComponentOutlet="TEMPLATES.ANKARA_TEMPLATE.component; injector: injector"></ng-container>
+    </ng-container>
+
+    <ng-container *ngSwitchDefault>
+      <ng-container *ngComponentOutlet="TEMPLATES.ISTANBUL_TEMPLATE.component; injector: injector"></ng-container>
+    </ng-container>
+  </ng-container>
+
+  <div *ngIf="isToggleButtonActive" class="template-selections">
+    <mat-button-toggle-group #group="matButtonToggleGroup" [formControl]="templateSelectiveControl">
+      <mat-button-toggle [value]="TEMPLATES.ISTANBUL_TEMPLATE.name">Istanbul</mat-button-toggle>
+      <mat-button-toggle [value]="TEMPLATES.ANKARA_TEMPLATE.name">Ankara</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+</div>

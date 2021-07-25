@@ -1,0 +1,13 @@
+<mat-form-field *ngIf="formControlName?.control as control" class="example-full-width" appearance="fill">
+  <mat-label>{{ label | sentence }}</mat-label>
+  <input
+    matInput
+    [placeholder]="placeholder || label"
+    [attr.type]="inputType"
+    [attr.name]="inputName || label"
+    [attr.aria-label]="label"
+    [formControl]="control"
+    [errorStateMatcher]="matcher"
+  />
+  <mat-error [formControlError]="formControlErrors">{{ formControlErrorMessage }}</mat-error>
+</mat-form-field>

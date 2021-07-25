@@ -1,0 +1,121 @@
+<form [formGroup]="form">
+  <ng-container *ngIf="formArray.controls.length" [formArrayName]="formArrayName">
+    <ng-container
+      *ngFor="
+        let control of formArray.controls;
+        let sectionIndex = index;
+        let sectionCount = count;
+        let lastSection = last;
+        trackBy: sectionTrackByFn
+      "
+      [formGroupName]="sectionIndex"
+    >
+      <ui-section-header
+        [title]="control.value?.title || title"
+        [subtitle]="subtitle"
+        (edit)="editSection($event, sectionIndex)"
+        (save)="saveSection($event, sectionIndex)"
+        (remove)="removeSection(sectionIndex)"
+      ></ui-section-header>
+
+      <button
+        *ngIf="control.value?.items?.length === 0"
+        mat-stroked-button
+        color="accent"
+        style="width: 100%"
+        (click)="insertItem(sectionIndex, 0, { config: { expanded: true } })"
+      >
+        <mat-icon>add</mat-icon> Add Item
+      </button>
+
+      <mat-accordion
+        *ngIf="sectionIndex | memoize: getItemsFormArray:this as itemsFormArray"
+        [formArrayName]="PROPS.ITEMS"
+      >
+        <ng-container
+          *ngFor="
+            let itemControl of itemsFormArray?.controls;
+            let itemIndex = index;
+            let itemCount = count;
+            let lastItem = last;
+            trackBy: itemTrackByFn
+          "
+          [formGroupName]="itemIndex"
+          #existingItem
+        >
+          <mat-expansion-panel
+            [expanded]="itemControl.value?.config?.expanded"
+            (opened)="setStep(sectionIndex, itemIndex)"
+          >
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <p>{{ itemControl.value[SECTION_PROPS.TITLE] }}</p>
+              </mat-panel-title>
+              <!-- <mat-panel-description>
+              <p>{{ itemControl.value[SECTION_PROPS.DESCRIPTION] }}</p>
+            </mat-panel-description> -->
+            </mat-expansion-panel-header>
+
+            <div class="mat-expansion-panel-body">
+              <ui-basic-input
+                [label]="SECTION_PROPS.TITLE"
+                [formControlName]="SECTION_PROPS.TITLE"
+                formControlErrors
+              ></ui-basic-input>
+              <ui-free-text-input
+                [label]="SECTION_PROPS.DESCRIPTION"
+                [formControlName]="SECTION_PROPS.DESCRIPTION"
+                formControlErrors
+              ></ui-free-text-input>
+              <ui-basic-input
+                [label]="SECTION_PROPS.CITY"
+                [formControlName]="SECTION_PROPS.CITY"
+                formControlErrors
+              ></ui-basic-input>
+              <ui-basic-input
+                [label]="SECTION_PROPS.START_DATE"
+                [formControlName]="SECTION_PROPS.START_DATE"
+                formControlErrors
+              ></ui-basic-input>
+              <ui-basic-input
+                [label]="SECTION_PROPS.END_DATE"
+                [formControlName]="SECTION_PROPS.END_DATE"
+                formControlErrors
+              ></ui-basic-input>
+            </div>
+
+            <mat-action-row>
+              <button
+                *ngIf="itemCount > 1"
+                mat-raised-button
+                color="warn"
+                aria-label="delete icon"
+                (click)="itemsFormArray.removeAt(itemIndex)"
+              >
+                <mat-icon>delete</mat-icon> Delete Item
+              </button>
+            </mat-action-row>
+          </mat-expansion-panel>
+          <button
+            *ngIf="lastItem"
+            mat-raised-button
+            color="accent"
+            style="width: 100%"
+            (click)="insertItem(sectionIndex, itemIndex + 1, { config: { expanded: true } })"
+          >
+            <mat-icon>add</mat-icon> Add Item
+          </button>
+        </ng-container>
+      </mat-accordion>
+      <button
+        *ngIf="lastSection"
+        mat-raised-button
+        color="primary"
+        style="width: 100%; margin-top: 30px"
+        (click)="insertSection(null, sectionIndex + 1)"
+      >
+        <mat-icon>add</mat-icon> Add New Section
+      </button>
+    </ng-container>
+  </ng-container>
+</form>

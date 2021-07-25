@@ -1,0 +1,57 @@
+<ui-section-header [title]="title" [subtitle]="subtitle" [options]="{ edit: false }"></ui-section-header>
+
+<form [formGroup]="form">
+  <mat-accordion *ngIf="formArray.controls" [formArrayName]="formArrayName">
+    <ng-container
+      *ngFor="let control of formArray.controls; let i = index; let c = count; let last = last; trackBy: trackByFn"
+      [formGroupName]="i"
+    >
+      <mat-expansion-panel [expanded]="control.value.config.expanded" (opened)="setStep(i)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <p>{{ control.value[PROPS.DEGREE] }}</p>
+          </mat-panel-title>
+          <mat-panel-description>
+            <p>{{ control.value[PROPS.SCHOOL] }}</p>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <div class="mat-expansion-panel-body">
+          <ui-basic-input [label]="PROPS.CITY" [formControlName]="PROPS.CITY" formControlErrors></ui-basic-input>
+          <ui-basic-input
+            [label]="PROPS.DESCRIPTION"
+            [formControlName]="PROPS.DESCRIPTION"
+            formControlErrors
+          ></ui-basic-input>
+          <ui-basic-input [label]="PROPS.DEGREE" [formControlName]="PROPS.DEGREE" formControlErrors></ui-basic-input>
+          <ui-basic-input [label]="PROPS.SCHOOL" [formControlName]="PROPS.SCHOOL" formControlErrors></ui-basic-input>
+          <ui-basic-input
+            [label]="PROPS.START_DATE"
+            [formControlName]="PROPS.START_DATE"
+            formControlErrors
+          ></ui-basic-input>
+          <ui-basic-input
+            [label]="PROPS.END_DATE"
+            [formControlName]="PROPS.END_DATE"
+            formControlErrors
+          ></ui-basic-input>
+        </div>
+
+        <mat-action-row>
+          <button *ngIf="c > 1" mat-raised-button color="warn" aria-label="delete icon" (click)="formArray.removeAt(i)">
+            <mat-icon>delete</mat-icon> Delete Item
+          </button>
+        </mat-action-row>
+      </mat-expansion-panel>
+      <button
+        *ngIf="last"
+        mat-raised-button
+        color="accent"
+        style="width: 100%"
+        (click)="insertItem(null, i + 1, { config: { expanded: true } })"
+      >
+        <mat-icon>add</mat-icon> Add Item
+      </button>
+    </ng-container>
+  </mat-accordion>
+</form>

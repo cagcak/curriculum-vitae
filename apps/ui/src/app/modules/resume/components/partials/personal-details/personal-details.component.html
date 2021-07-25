@@ -1,0 +1,122 @@
+<ui-section-header [title]="title" [subtitle]="subtitle" [options]="{ remove: false, edit: false }"></ui-section-header>
+<form [formGroup]="form">
+  <div
+    *ngIf="configs$ | async as configs"
+    fxLayout="row wrap"
+    fxFlexAlign="center"
+    fxLayout.xs="column"
+    fxLayoutAlign="space-around center"
+    fxLayoutGap="20px grid"
+  >
+    <ui-auto-complete
+      [fxFlex]="50"
+      [label]="PROPS.WANTED_JOB_TITLE"
+      [items]="configs.jobs"
+      [formControlName]="PROPS.WANTED_JOB_TITLE"
+      formControlErrors
+    ></ui-auto-complete>
+
+    <div [fxFlex]="50" [formGroupName]="PROPS.AVATAR">
+      <mat-grid-list cols="2" rowHeight="1:1">
+        <mat-grid-tile>
+          <figure>
+            <img
+              [attr.src]="avatarForm.controls[AVATAR_PROPS.THUMB_URL].value"
+              [attr.alt]="PROPS.AVATAR | sentence"
+              height="75"
+            />
+            <figcaption>{{ PROPS.AVATAR | sentence }}</figcaption>
+          </figure>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <button mat-mini-fab color="primary" aria-label="Edit avatar" (click)="openAvatarDialog()">
+            <mat-icon>edit_mode</mat-icon>
+          </button>
+          <button mat-mini-fab color="accent" aria-label="Delete">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+
+    <ui-basic-input
+      [fxFlex]="50"
+      [label]="PROPS.FIRST_NAME"
+      [formControlName]="PROPS.FIRST_NAME"
+      formControlErrors
+    ></ui-basic-input>
+
+    <ui-basic-input
+      [fxFlex]="50"
+      [label]="PROPS.LAST_NAME"
+      [formControlName]="PROPS.LAST_NAME"
+      [formControlErrors]="{ required: 'last name required' }"
+    >
+    </ui-basic-input>
+
+    <ui-basic-input [fxFlex]="50" [label]="PROPS.EMAIL" [formControlName]="PROPS.EMAIL" formControlErrors>
+    </ui-basic-input>
+
+    <ui-basic-input
+      [fxFlex]="50"
+      [label]="PROPS.PHONE"
+      [formControlName]="PROPS.PHONE"
+      [formControlErrors]="{ pattern: 'invalid phone' }"
+    >
+    </ui-basic-input>
+
+    <ui-auto-complete
+      [fxFlex]="50"
+      [label]="PROPS.COUNTRY"
+      [items]="configs.countries"
+      [formControlName]="PROPS.COUNTRY"
+      formControlErrors
+    ></ui-auto-complete>
+
+    <ui-auto-complete
+      [fxFlex]="50"
+      [label]="PROPS.CITY"
+      [items]="[form.value[PROPS.COUNTRY], configs.countries] | memoize: getCities:this"
+      [formControlName]="PROPS.CITY"
+      formControlErrors
+    ></ui-auto-complete>
+
+    <ui-basic-input [fxFlex]="50" [label]="PROPS.ADDRESS" [formControlName]="PROPS.ADDRESS" formControlErrors>
+    </ui-basic-input>
+
+    <ui-basic-input [fxFlex]="50" [label]="PROPS.POSTAL_CODE" [formControlName]="PROPS.POSTAL_CODE" formControlErrors>
+    </ui-basic-input>
+
+    <ui-basic-input
+      [fxFlex]="50"
+      [label]="PROPS.DRIVING_LICENSE"
+      [formControlName]="PROPS.DRIVING_LICENSE"
+      formControlErrors
+    >
+    </ui-basic-input>
+
+    <ui-auto-complete
+      [fxFlex]="50"
+      [label]="PROPS.NATIONALITY"
+      [items]="configs.nationalities"
+      [formControlName]="PROPS.NATIONALITY"
+      formControlErrors
+    ></ui-auto-complete>
+
+    <ui-basic-input
+      [fxFlex]="50"
+      [label]="PROPS.DATE_OF_BIRTH"
+      [formControlName]="PROPS.DATE_OF_BIRTH"
+      formControlErrors
+    >
+    </ui-basic-input>
+
+    <ui-basic-input
+      [fxFlex]="50"
+      [label]="PROPS.PLACE_OF_BIRTH"
+      [formControlName]="PROPS.PLACE_OF_BIRTH"
+      formControlErrors
+    >
+    </ui-basic-input>
+  </div>
+</form>

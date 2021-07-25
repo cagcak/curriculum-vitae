@@ -1,0 +1,17 @@
+<mat-form-field *ngIf="formControl" class="example-full-width" appearance="fill">
+  <mat-label>{{ label | sentence }}</mat-label>
+  <input
+    matInput
+    [attr.aria-label]="label"
+    [attr.name]="label | lowercase"
+    [matAutocomplete]="auto"
+    [formControl]="formControl"
+    [errorStateMatcher]="matcher"
+  />
+  <mat-autocomplete #auto="matAutocomplete">
+    <mat-option *ngFor="let item of filteredItems$ | async" [value]="item.title">
+      <small>{{ item.title }}</small>
+    </mat-option>
+  </mat-autocomplete>
+  <mat-error [formControlError]="formControlErrors">{{ formControlErrorMessage }}</mat-error>
+</mat-form-field>

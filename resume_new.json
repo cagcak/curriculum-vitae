@@ -1,0 +1,233 @@
+{
+  "_id": "607440a290754796c99ddc3d",
+  "payload": {
+    "courses": [
+      {
+        "course": "The Complete Guide Angula, Vue, React courses from Maximilian Schwarzmüller",
+        "startDate": "2019-02-01",
+        "endDate": "2021-02-01",
+        "institution": "Udemy"
+      },
+      {
+        "course": "Python Core, C#, C++, Java, Ruby, SQL, jQuery, PHP courses",
+        "startDate": "2018-05-01",
+        "endDate": "2021-02-01",
+        "institution": "SoloLearn"
+      }
+    ],
+    "employmentHistories": [
+      {
+        "jobTitle": "Frontend Developer",
+        "employer": "Etiya",
+        "city": "Istanbul",
+        "startDate": "2019-11-01",
+        "endDate": "2021-02-01",
+        "description": "Supported on IT infrastructure based Etiya Omni Channel digital front end business-modeled applications by mostly using Angular 8.x, Typescript, NodeJS, Jest testing framework."
+      },
+      {
+        "jobTitle": "Frontend Developer",
+        "employer": "Anzera Öğrenme Teknolojileri A.Ş.",
+        "city": "Istanbul",
+        "startDate": "2018-06-01",
+        "endDate": "2019-11-01",
+        "description": "Supported on e-Learning based front-end projects by using the tech stack which are pure Javascript, jQuery, Angular, VueJS,, rarely ReactJS, and Gitlab CI/CD operations."
+      },
+      {
+        "jobTitle": "Frontend Developer",
+        "employer": "Advantech Türkiye",
+        "city": "Istanbul",
+        "startDate": "2017-07-01",
+        "endDate": "2018-06-01",
+        "description": "Developing client side UI for industrial automation projects based on Advantech products and several customer specific SPAs, content marketing solutions, full stack web projects for the partner company, Lima Industrial Computer, EDM development, content marketing, web analytics etc."
+      }
+    ],
+    "personalDetail": {
+      "address": "Some address",
+      "city": "New York",
+      "country": "USA",
+      "dateOfBirth": "08-12-1990",
+      "drivingLicense": "A",
+      "email": "jhon@doe.mail",
+      "firstName": "Çağrı",
+      "lastName": "Çakır",
+      "nationality": "US",
+      "phone": "+43 324 33 23",
+      "placeOfBirth": "Utah",
+      "postalCode": "5343423",
+      "wantedJobTitle": "Front end developer"
+    },
+    "professionalSummary": {
+      "text": "Experienced Front end Engineer with a demonstrated history of working in the information technology and services industry. Mostly skilled in JavaScript, Typescript, Angular, NodeJS, PHP, Java SE, Python, Android and Linux systems. Limited working experiences with Vue and React. Strong engineering professional with a Bachelor of Engineering (B.E.) focused in Software Engineering."
+    },
+    "educations": [
+      {
+        "school": "International Ataturk Alatoo University",
+        "degree": "Bechelor",
+        "city": "Bishkek",
+        "startDate": "2008-09-01",
+        "endDate": "2014-08-01",
+        "description": "Computer Science Department"
+      },
+      {
+        "school": "Industrial Vocational College",
+        "degree": "Electronics Technician",
+        "city": "Istanbul",
+        "startDate": "2004-09-01",
+        "endDate": "2007-05-01",
+        "description": "Industrial Vocational College Electronics Department"
+      }
+    ],
+    "skills": [
+      {
+        "skill": "JavaScript",
+        "level": 3
+      },
+      {
+        "skill": "Typescript",
+        "level": 3
+      },
+      {
+        "skill": "NodeJS",
+        "level": 3
+      },
+      {
+        "skill": "Angular 2+",
+        "level": 3
+      },
+      {
+        "skill": "React",
+        "level": 3
+      },
+      {
+        "skill": "Vue",
+        "level": 3
+      },
+      {
+        "skill": "Python",
+        "level": 3
+      },
+      {
+        "skill": "HTML & CSS",
+        "level": 3
+      },
+      {
+        "skill": "Git",
+        "level": 3
+      },
+      {
+        "skill": "PHP",
+        "level": 3
+      },
+      {
+        "skill": "GraphQL",
+        "level": 3
+      },
+      {
+        "skill": "Docker",
+        "level": 3
+      }
+    ],
+    "languages": [
+      {
+        "language": "English",
+        "level": 5
+      },
+      {
+        "language": "Russian",
+        "level": 2
+      }
+    ],
+    "references": [
+      {
+        "fullName": "Selçuk KAÇAK",
+        "company": "Etiya",
+        "phone": "",
+        "email": "selcuk.kacak@etiya.com",
+        "displayStatus": null,
+        "title": ""
+      },
+      {
+        "fullName": "Süleyman Murat BAĞSIZ",
+        "company": "MyNet",
+        "phone": "",
+        "email": "bagsiz@hotmail.com",
+        "displayStatus": null,
+        "title": ""
+      },
+      {
+        "fullName": "Görkem Güngör",
+        "company": "Etiya",
+        "phone": "",
+        "email": "gorkem.gungor@etiya.com",
+        "displayStatus": null,
+        "title": ""
+      }
+    ],
+    "socialLinks": [
+      {
+        "address": "Linkedin",
+        "platform": "https://www.linkedin.com/in/cagcak/"
+      },
+      {
+        "address": "Skype",
+        "platform": "https://join.skype.com/invite/lijbxXAsE5MP"
+      },
+      {
+        "address": "Github",
+        "platform": "https://github.com/cagcak"
+      }
+    ],
+    "hobbies": [
+      {
+        "text": "Motorbike riding, producing electronic music"
+      }
+    ],
+    "customSections": [
+      {
+        "title": "Organizations",
+        "items": [
+          {
+            "title": "Frontend Istanbul",
+            "city": null,
+            "description": null,
+            "startDate": "2019-05-01",
+            "endDate": "2021-02-01"
+          },
+          {
+            "title": "Advantech & Alitek iFactory Solution Days",
+            "city": null,
+            "description": null,
+            "startDate": "2017-10-01",
+            "endDate": "2018-03-01"
+          },
+          {
+            "title": "BMO",
+            "city": "Istanbul",
+            "description": null,
+            "startDate": "2019-11-01",
+            "endDate": "2021-02-01"
+          }
+        ]
+      },
+      {
+        "title": "Publications",
+        "items": [
+          {
+            "title": "Medium article",
+            "city": null,
+            "description": "<p><a href=\"https://cagcak.medium.com/a-common-story-of-reusable-cross-platformvuejs-component-library-ecaf86a0e35d\">A common story of reusable cross-platform VueJS component library</a></p>",
+            "startDate": "2019-06-01",
+            "endDate": "2021-02-01"
+          },
+          {
+            "title": "Medium article",
+            "city": null,
+            "description": "<p><a href=\"https://cagcak.medium.com/float-like-a-mutable-sting-like-an-immutable-f3800d50067a\">Float like a “Mutable”, sting like an “Immutable”</a></p>",
+            "startDate": "2021-02-13",
+            "endDate": "2021-02-01"
+          }
+        ]
+      }
+    ]
+  }
+}

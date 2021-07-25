@@ -1,0 +1,34 @@
+<mat-accordion [multi]="multi" [togglePosition]="togglePosition" class="accordion-container">
+  <mat-expansion-panel
+    *ngFor="let item of expansionPanelItems; let index = index; let count = count; trackBy: trackByFn"
+    [hideToggle]="hideToggle"
+    [expanded]="index === activeStep"
+    (opened)="activeStep = index"
+  >
+    <mat-expansion-panel-header>
+      <mat-panel-title *ngIf="item.title">{{ item.title }}</mat-panel-title>
+      <mat-panel-description *ngIf="item.description">
+        {{ item.description }}
+        <mat-icon *ngIf="item.headerIcon">{{ item.headerIcon }}</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <ng-container *ngIf="item.template">
+      <ng-container *ngTemplateOutlet="item.template"></ng-container>
+    </ng-container>
+    <ng-container *ngIf="item.component">
+      <ng-container *ngComponentOutlet="item.component"></ng-container>
+    </ng-container>
+
+    <ng-content *ngIf="!item.template && !item.component"></ng-content>
+
+    <mat-action-row *ngIf="navigationalActions">
+      <button *ngIf="activeStep !== 0" mat-button color="warn" (click)="activeStep = activeStep - 1">
+        {{ 'Previous' | translate }}
+      </button>
+      <button *ngIf="activeStep !== count - 1" mat-button color="primary" (click)="activeStep = activeStep + 1">
+        {{ 'Next' | translate }}
+      </button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>

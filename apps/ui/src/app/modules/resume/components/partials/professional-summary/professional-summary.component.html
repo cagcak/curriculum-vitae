@@ -1,0 +1,7 @@
+<ui-section-header
+  [title]="title"
+  subtitle="Include 2-3 clear sentences about your overall experience"
+></ui-section-header>
+<form [formGroup]="form">
+  <ui-free-text-input [label]="title" [formControlName]="PROPS.TEXT" formControlErrors></ui-free-text-input>
+</form>

@@ -1,0 +1,584 @@
+{
+  "id": 12101199,
+  "type": "resume",
+  "renderingToken": "jm3tRH3eQDoQMmcRybUjm1bY",
+  "name": "Software Developer",
+  "avatar": {
+    "transform": {
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1
+      },
+      "zoom": 1,
+      "angle": 0,
+      "customBackground": {
+        "color": null,
+        "image": null
+      }
+    },
+    "thumbUrl": "https://s3.resume.io/uploads/profile_picture/file/4109528/thumb_8e18201f832daecb173f7457de33c201.jpg?version=5bfa1ebc4",
+    "mediumUrl": "https://s3.resume.io/uploads/profile_picture/file/4109528/medium_squared_8e18201f832daecb173f7457de33c201.jpg?version=5bfa1ebc4",
+    "originalUrl": "https://s3.resume.io/uploads/profile_picture/original_file/4109528/24040db4a32a7bd35f6ae83493232db6.jpeg",
+    "blank": false
+  },
+  "position": "Front end Developer",
+  "firstName": "Çağrı",
+  "lastName": "Çakır",
+  "phoneNumber": "",
+  "countryName": "Turkey",
+  "city": "Istanbul",
+  "address": null,
+  "postalCode": null,
+  "birthPlace": null,
+  "birthDate": "",
+  "drivingLicense": "A",
+  "nationality": "Turkish",
+  "email": "cagcak@outlook.com",
+  "profile": "<p>Experienced Front end Engineer with a demonstrated history of working in the information technology and services industry. Mostly skilled in JavaScript, Typescript, Angular, NodeJS, PHP, Java SE, Python, Android and Linux systems. Limited working experiences with Vue and React. Strong engineering professional with a Bachelor of Engineering (B.E.) focused in Software Engineering.</p>",
+  "template": "stockholm",
+  "sectionsOrder": [
+    "profile",
+    "workExperiences",
+    "educations",
+    "skills",
+    "courses",
+    "languages",
+    "hobbies",
+    "socialProfiles",
+    "custom:2205126442",
+    "custom:1297430276",
+    "references",
+    "internships"
+  ],
+  "color": "#2196F3",
+  "spacing": 0,
+  "version": "e3027f4b95",
+  "secureId": "NOLMWulFZ",
+  "locale": "en",
+  "referencesUponRequest": true,
+  "hideSkillLevel": false,
+  "sectionTitles": {
+    "socialProfiles": "Social Links"
+  },
+  "updatedAt": 1625495652961,
+  "createdAt": 1613215104072,
+  "workExperiences": [
+    {
+      "id": 22696986,
+      "title": "Frontend Developer",
+      "employer": "Etiya",
+      "city": "Istanbul",
+      "dateFrom": "2019-11-01",
+      "dateUntil": "2021-02-01",
+      "description": "<p>Supported on IT infrastructure based Etiya Omni Channel digital front end business-modeled applications by mostly using Angular 8.x, Typescript, NodeJS, Jest testing framework.</p>",
+      "resumeId": 12101199,
+      "createdAt": "2021-02-13T13:08:03.549+01:00",
+      "updatedAt": "2021-02-13T13:25:10.815+01:00",
+      "position": 1,
+      "isMonthUntilHidden": false,
+      "isDateUntilPresent": true,
+      "isMonthFromHidden": false,
+      "cid": null
+    },
+    {
+      "id": 22696956,
+      "title": "Frontend Developer",
+      "employer": "Anzera Öğrenme Teknolojileri A.Ş.",
+      "city": "Istanbul",
+      "dateFrom": "2018-06-01",
+      "dateUntil": "2019-11-01",
+      "description": "<p>Supported on e-Learning based front-end projects by using the tech stack which are pure Javascript, jQuery, Angular, VueJS,, rarely ReactJS, and Gitlab CI/CD operations.</p>",
+      "resumeId": 12101199,
+      "createdAt": "2021-02-13T13:06:49.452+01:00",
+      "updatedAt": "2021-02-15T12:00:59.461+01:00",
+      "position": 2,
+      "isMonthUntilHidden": false,
+      "isDateUntilPresent": false,
+      "isMonthFromHidden": false,
+      "cid": null
+    },
+    {
+      "id": 22696857,
+      "title": "Frontend Developer",
+      "employer": "Advantech Türkiye",
+      "city": "Istanbul",
+      "dateFrom": "2017-07-01",
+      "dateUntil": "2018-06-01",
+      "description": "<p>Developing client side UI for industrial automation projects based on Advantech products and several customer specific SPAs, content marketing solutions, full stack web projects for the partner company, Lima Industrial Computer, EDM development, content marketing, web analytics etc.</p>",
+      "resumeId": 12101199,
+      "createdAt": "2021-02-13T13:02:10.510+01:00",
+      "updatedAt": "2021-02-15T12:00:59.457+01:00",
+      "position": 3,
+      "isMonthUntilHidden": false,
+      "isDateUntilPresent": false,
+      "isMonthFromHidden": false,
+      "cid": null
+    }
+  ],
+  "educations": [
+    {
+      "id": 15439334,
+      "school": "International Ataturk Alatoo University",
+      "degree": "Bechelor",
+      "level": null,
+      "city": "Bishkek",
+      "dateFrom": "2008-09-01",
+      "dateUntil": "2014-08-01",
+      "description": "<p>Computer Science Department</p>",
+      "resumeId": 12101199,
+      "createdAt": "2021-02-13T12:18:24.081+01:00",
+      "updatedAt": "2021-02-13T13:29:57.020+01:00",
+      "position": 1,
+      "isMonthUntilHidden": false,
+      "isDateUntilPresent": false,
+      "isMonthFromHidden": false,
+      "cid": null
+    },
+    {
+      "id": 15439335,
+      "school": "Industrial Vocational College",
+      "degree": "Electronics Technician",
+      "level": null,
+      "city": "Istanbul",
+      "dateFrom": "2004-09-01",
+      "dateUntil": "2007-05-01",
+      "description": "<p>Industrial Vocational College Electronics Department</p>",
+      "resumeId": 12101199,
+      "createdAt": "2021-02-13T12:18:24.083+01:00",
+      "updatedAt": "2021-04-26T16:45:54.309+02:00",
+      "position": 2,
+      "isMonthUntilHidden": false,
+      "isDateUntilPresent": false,
+      "isMonthFromHidden": false,
+      "cid": null
+    }
+  ],
+  "courses": [
+    {
+      "id": 6539836,
+      "course": "The Complete Guide Angula, Vue, React courses from Maximilian Schwarzmüller",
+      "institution": "Udemy",
+      "dateFrom": "2019-02-01",
+      "dateUntil": "2021-02-01",
+      "description": null,
+      "resumeId": 12101199,
+      "createdAt": "2021-02-13T13:40:05.143+01:00",
+      "updatedAt": "2021-02-13T13:47:51.544+01:00",
+      "position": 1,
+      "isMonthUntilHidden": false,
+      "isDateUntilPresent": true,
+      "isMonthFromHidden": false,
+      "cid": null
+    },
+    {
+      "id": 6539854,
+      "course": "Python Core, C#, C++, Java, Ruby, SQL, jQuery, PHP courses",
+      "institution": "SoloLearn",
+      "dateFrom": "2018-05-01",
+      "dateUntil": "2021-02-01",
+      "description": null,
+      "resumeId": 12101199,
+      "createdAt": "2021-02-13T13:43:46.841+01:00",
+      "updatedAt": "2021-02-13T13:49:47.157+01:00",
+      "position": 2,
+      "isMonthUntilHidden": false,
+      "isDateUntilPresent": true,
+      "isMonthFromHidden": false,
+      "cid": null
+    }
+  ],
+  "internships": [],
+  "activities": [],
+  "skills": [
+    {
+      "id": 33895196,
+      "skill": "JavaScript",
+      "level": "expert",
+      "resumeId": 12101199,
+      "createdAt": "2021-02-13T14:07:17.964+01:00",
+      "updatedAt": "2021-02-13T14:10:19.420+01:00",
+      "position": 1,
+      "sourceAlgo": null,
+      "cid": null
+    },
+    {
+      "id": 33893738,
+      "skill": "Typescript",
+      "level": "experienced",
+      "resumeId": 12101199,
+      "createdAt": "2021-02-13T13:36:06.477+01:00",
+      "updatedAt": "2021-02-13T14:10:19.425+01:00",
+      "position": 2,
+      "sourceAlgo": null,
+      "cid": null
+    },
+    {
+      "id": 33893747,
+      "skill": "NodeJS",
+      "level": "skillful",
+      "resumeId": 12101199,
+      "createdAt": "2021-02-13T13:36:24.382+01:00",
+      "updatedAt": "2021-02-13T14:10:58.378+01:00",
+      "position": 3,
+      "sourceAlgo": null,
+      "cid": null
+    },
+    {
+      "id": 33890013,
+      "skill": "Angular 2+",
+      "level": "expert",
+      "resumeId": 12101199,
+      "createdAt": "2021-02-13T12:18:24.087+01:00",
+      "updatedAt": "2021-02-13T14:10:58.370+01:00",
+      "position": 4,
+      "sourceAlgo": null,
+      "cid": null
+    },
+    {
+      "id": 33895260,
+      "skill": "React",
+      "level": "beginner",
+      "resumeId": 12101199,
+      "createdAt": "2021-02-13T14:08:03.515+01:00",
+      "updatedAt": "2021-02-13T14:10:58.373+01:00",
+      "position": 5,
+      "sourceAlgo": null,
+      "cid": null
+    },
+    {
+      "id": 33893773,
+      "skill": "Vue",
+      "level": "skillful",
+      "resumeId": 12101199,
+      "createdAt": "2021-02-13T13:36:46.565+01:00",
+      "updatedAt": "2021-02-13T14:10:58.375+01:00",
+      "position": 6,
+      "sourceAlgo": null,
+      "cid": null
+    },
+    {
+      "id": 33895244,
+      "skill": "Python",
+      "level": "skillful",
+      "resumeId": 12101199,
+      "createdAt": "2021-02-13T14:07:54.566+01:00",
+      "updatedAt": "2021-02-13T14:10:49.939+01:00",
+      "position": 7,
+      "sourceAlgo": null,
+      "cid": null
+    },
+    {
+      "id": 33895319,
+      "skill": "HTML & CSS",
+      "level": "expert",
+      "resumeId": 12101199,
+      "createdAt": "2021-02-13T14:09:02.199+01:00",
+      "updatedAt": "2021-02-13T14:10:49.944+01:00",
+      "position": 8,
+      "sourceAlgo": null,
+      "cid": null
+    },
+    {
+      "id": 33895338,
+      "skill": "Git",
+      "level": "experienced",
+      "resumeId": 12101199,
+      "createdAt": "2021-02-13T14:09:41.919+01:00",
+      "updatedAt": "2021-02-13T14:10:49.951+01:00",
+      "position": 9,
+      "sourceAlgo": null,
+      "cid": null
+    },
+    {
+      "id": 33895521,
+      "skill": "PHP",
+      "level": "experienced",
+      "resumeId": 12101199,
+      "createdAt": "2021-02-13T14:13:20.653+01:00",
+      "updatedAt": "2021-02-13T14:16:31.774+01:00",
+      "position": 10,
+      "sourceAlgo": null,
+      "cid": null
+    },
+    {
+      "id": 33896108,
+      "skill": "GraphQL",
+      "level": "experienced",
+      "resumeId": 12101199,
+      "createdAt": "2021-02-13T14:24:55.249+01:00",
+      "updatedAt": "2021-02-13T14:25:05.576+01:00",
+      "position": 11,
+      "sourceAlgo": null,
+      "cid": null
+    },
+    {
+      "id": 41485416,
+      "skill": "Docker",
+      "level": "beginner",
+      "resumeId": 12101199,
+      "createdAt": "2021-05-11T16:43:49.579+02:00",
+      "updatedAt": "2021-05-11T16:43:59.610+02:00",
+      "position": 12,
+      "sourceAlgo": null,
+      "cid": null
+    }
+  ],
+  "languages": [
+    {
+      "id": 11607987,
+      "language": "English",
+      "level": "low_intermediate",
+      "resumeId": 12101199,
+      "createdAt": "2021-02-13T14:05:04.607+01:00",
+      "updatedAt": "2021-02-13T14:06:21.979+01:00",
+      "position": 1,
+      "cid": null
+    },
+    {
+      "id": 11607997,
+      "language": "Russian",
+      "level": "elementary",
+      "resumeId": 12101199,
+      "createdAt": "2021-02-13T14:05:31.603+01:00",
+      "updatedAt": "2021-02-13T14:05:59.878+01:00",
+      "position": 2,
+      "cid": null
+    }
+  ],
+  "hobbies": [
+    {
+      "id": 4876801,
+      "hobby": "Motorbike riding, producing electronic music",
+      "resumeId": 12101199,
+      "createdAt": "2021-02-13T12:18:24.099+01:00",
+      "updatedAt": "2021-02-13T14:17:00.966+01:00",
+      "position": 1,
+      "cid": null
+    }
+  ],
+  "references": [
+    {
+      "id": 7002030,
+      "name": "Selçuk KAÇAK",
+      "company": "Etiya",
+      "phone": "",
+      "email": "selcuk.kacak@etiya.com",
+      "requestOnly": null,
+      "resumeId": 12101199,
+      "createdAt": "2021-02-13T12:18:24.100+01:00",
+      "updatedAt": "2021-02-13T13:53:24.048+01:00",
+      "position": 1,
+      "cid": null
+    },
+    {
+      "id": 7002031,
+      "name": "Süleyman Murat BAĞSIZ",
+      "company": "MyNet",
+      "phone": "",
+      "email": "bagsiz@hotmail.com",
+      "requestOnly": null,
+      "resumeId": 12101199,
+      "createdAt": "2021-02-13T12:18:24.102+01:00",
+      "updatedAt": "2021-02-13T13:54:15.011+01:00",
+      "position": 2,
+      "cid": null
+    },
+    {
+      "id": 7002032,
+      "name": "Görkem Güngör",
+      "company": "Etiya",
+      "phone": "",
+      "email": "gorkem.gungor@etiya.com",
+      "requestOnly": null,
+      "resumeId": 12101199,
+      "createdAt": "2021-02-13T12:18:24.104+01:00",
+      "updatedAt": "2021-02-13T13:55:15.209+01:00",
+      "position": 3,
+      "cid": null
+    }
+  ],
+  "socialProfiles": [
+    {
+      "id": 3172725,
+      "label": "Linkedin",
+      "link": "https://www.linkedin.com/in/cagcak/",
+      "resumeId": 12101199,
+      "createdAt": "2021-02-13T13:56:09.723+01:00",
+      "updatedAt": "2021-02-13T13:56:56.331+01:00",
+      "position": 1,
+      "cid": null
+    },
+    {
+      "id": 3172729,
+      "label": "Skype",
+      "link": "https://join.skype.com/invite/lijbxXAsE5MP",
+      "resumeId": 12101199,
+      "createdAt": "2021-02-13T13:57:08.105+01:00",
+      "updatedAt": "2021-02-13T14:04:10.221+01:00",
+      "position": 2,
+      "cid": null
+    },
+    {
+      "id": 3172777,
+      "label": "Github",
+      "link": "https://github.com/cagcak",
+      "resumeId": 12101199,
+      "createdAt": "2021-02-13T14:15:14.540+01:00",
+      "updatedAt": "2021-02-13T14:16:14.709+01:00",
+      "position": 3,
+      "cid": null
+    }
+  ],
+  "customSections": [
+    {
+      "id": 4737845,
+      "title": "Organizations",
+      "externalId": "1297430276",
+      "items": [
+        {
+          "id": 5033227,
+          "sectionId": 4737845,
+          "title": "Frontend Istanbul",
+          "city": null,
+          "description": null,
+          "dateFrom": "2019-05-01",
+          "dateUntil": "2021-02-01",
+          "isDateUntilPresent": true,
+          "isMonthUntilHidden": false,
+          "isMonthFromHidden": false,
+          "createdAt": "2021-02-13T14:22:14.895+01:00",
+          "updatedAt": "2021-02-13T14:22:38.357+01:00",
+          "position": 1,
+          "cid": null
+        },
+        {
+          "id": 5033231,
+          "sectionId": 4737845,
+          "title": "Advantech & Alitek iFactory Solution Days",
+          "city": null,
+          "description": null,
+          "dateFrom": "2017-10-01",
+          "dateUntil": "2018-03-01",
+          "isDateUntilPresent": false,
+          "isMonthUntilHidden": false,
+          "isMonthFromHidden": false,
+          "createdAt": "2021-02-13T14:22:53.445+01:00",
+          "updatedAt": "2021-02-13T14:23:21.579+01:00",
+          "position": 2,
+          "cid": null
+        },
+        {
+          "id": 5033240,
+          "sectionId": 4737845,
+          "title": "BMO",
+          "city": "Istanbul",
+          "description": null,
+          "dateFrom": "2019-11-01",
+          "dateUntil": "2021-02-01",
+          "isDateUntilPresent": true,
+          "isMonthUntilHidden": false,
+          "isMonthFromHidden": false,
+          "createdAt": "2021-02-13T14:24:01.595+01:00",
+          "updatedAt": "2021-02-13T14:24:24.001+01:00",
+          "position": 3,
+          "cid": null
+        }
+      ]
+    },
+    {
+      "id": 4737828,
+      "title": "Publications",
+      "externalId": "2205126442",
+      "items": [
+        {
+          "id": 5033212,
+          "sectionId": 4737828,
+          "title": "Medium article",
+          "city": null,
+          "description": "<p><a href=\"https://cagcak.medium.com/a-common-story-of-reusable-cross-platformvuejs-component-library-ecaf86a0e35d\">A common story of reusable cross-platform VueJS component library</a></p>",
+          "dateFrom": "2019-06-01",
+          "dateUntil": "2021-02-01",
+          "isDateUntilPresent": true,
+          "isMonthUntilHidden": false,
+          "isMonthFromHidden": false,
+          "createdAt": "2021-02-13T14:17:23.702+01:00",
+          "updatedAt": "2021-02-13T14:20:20.502+01:00",
+          "position": 1,
+          "cid": null
+        },
+        {
+          "id": 5033221,
+          "sectionId": 4737828,
+          "title": "Medium article",
+          "city": null,
+          "description": "<p><a href=\"https://cagcak.medium.com/float-like-a-mutable-sting-like-an-immutable-f3800d50067a\">Float like a “Mutable”, sting like an “Immutable”</a></p>",
+          "dateFrom": "2021-02-13",
+          "dateUntil": "2021-02-01",
+          "isDateUntilPresent": true,
+          "isMonthUntilHidden": false,
+          "isMonthFromHidden": null,
+          "createdAt": "2021-02-13T14:20:29.590+01:00",
+          "updatedAt": "2021-02-13T14:21:17.546+01:00",
+          "position": 2,
+          "cid": null
+        }
+      ]
+    },
+    {},
+    {
+      "title": "Organizations",
+      "items": [
+        {
+          "title": "Frontend Istanbul",
+          "city": null,
+          "description": null,
+          "startDate": "2019-05-01",
+          "endDate": "2021-02-01"
+        },
+        {
+          "id": 5033231,
+          "sectionId": 4737845,
+          "title": "Advantech & Alitek iFactory Solution Days",
+          "city": null,
+          "description": null,
+          "startDate": "2017-10-01",
+          "endDate": "2018-03-01"
+        },
+        {
+          "id": 5033240,
+          "sectionId": 4737845,
+          "title": "BMO",
+          "city": "Istanbul",
+          "description": null,
+          "startDate": "2019-11-01",
+          "endDate": "2021-02-01"
+        }
+      ]
+    },
+    {
+      "title": "Publications",
+      "items": [
+        {
+          "id": 5033212,
+          "sectionId": 4737828,
+          "title": "Medium article",
+          "city": null,
+          "description": "<p><a href=\"https://cagcak.medium.com/a-common-story-of-reusable-cross-platformvuejs-component-library-ecaf86a0e35d\">A common story of reusable cross-platform VueJS component library</a></p>",
+          "startDate": "2019-06-01",
+          "endDate": "2021-02-01"
+        },
+        {
+          "id": 5033221,
+          "sectionId": 4737828,
+          "title": "Medium article",
+          "city": null,
+          "description": "<p><a href=\"https://cagcak.medium.com/float-like-a-mutable-sting-like-an-immutable-f3800d50067a\">Float like a “Mutable”, sting like an “Immutable”</a></p>",
+          "startDate": "2021-02-13",
+          "endDate": "2021-02-01"
+        }
+      ]
+    }
+  ]
+}

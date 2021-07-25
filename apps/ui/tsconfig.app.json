@@ -1,0 +1,20 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../dist/out-tsc",
+    "baseUrl": "src/",
+    "lib": ["es2017", "dom", "esnext.asynciterable"],
+    "experimentalDecorators": true,
+    "paths": {
+      "@ui/shared": ["app/shared/index.ts"],
+      "@ui/env": ["environments/index.ts"]
+    }
+  },
+  "angularCompilerOptions": {
+    "enableIvy": true,
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true,
+    "preserveWhitespaces": true
+  },
+  "files": ["src/main.ts", "src/polyfills.ts"]
+}

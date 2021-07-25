@@ -1,0 +1,15 @@
+<mat-form-field class="input-with-hints">
+  <mat-label>{{ label }}</mat-label>
+  <input
+    matInput
+    #message
+    [maxlength]="maxlength"
+    [placeholder]="placeholder"
+    [attr.name]="inputName"
+    [(ngModel)]="value"
+  />
+  <mat-hint *ngIf="hint" align="start"
+    ><strong>{{ hint }}</strong>
+  </mat-hint>
+  <mat-hint *ngIf="maxlength" align="end">{{ message.value.length }} / {{ maxlength }}</mat-hint>
+</mat-form-field>

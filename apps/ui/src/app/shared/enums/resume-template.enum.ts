@@ -1,0 +1,4 @@
+export enum ResumeTemplateKeys {
+  ISTANBUL_TEMPLATE = 'ISTANBUL_TEMPLATE',
+  ANKARA_TEMPLATE = 'ANKARA_TEMPLATE',
+}

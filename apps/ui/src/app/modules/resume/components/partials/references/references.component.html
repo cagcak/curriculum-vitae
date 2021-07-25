@@ -1,0 +1,48 @@
+<ui-section-header [title]="title" [subtitle]="subtitle"></ui-section-header>
+
+<form [formGroup]="form">
+  <mat-accordion *ngIf="formArray.controls" [formArrayName]="formArrayName">
+    <ng-container
+      *ngFor="let control of formArray.controls; let i = index; let c = count; let last = last; trackBy: trackByFn"
+      [formGroupName]="i"
+    >
+      <mat-expansion-panel [expanded]="control.value.config.expanded" (opened)="setStep(i)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <p>{{ control.value[PROPS.FULL_NAME] }}</p>
+          </mat-panel-title>
+          <mat-panel-description>
+            <p>{{ control.value[PROPS.COMPANY] }}</p>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <div class="mat-expansion-panel-body">
+          <ui-basic-input
+            [label]="PROPS.FULL_NAME"
+            [formControlName]="PROPS.FULL_NAME"
+            formControlErrors
+          ></ui-basic-input>
+          <ui-basic-input [label]="PROPS.TITLE" [formControlName]="PROPS.TITLE" formControlErrors></ui-basic-input>
+          <ui-basic-input [label]="PROPS.COMPANY" [formControlName]="PROPS.COMPANY" formControlErrors></ui-basic-input>
+          <ui-basic-input [label]="PROPS.EMAIL" [formControlName]="PROPS.EMAIL" formControlErrors></ui-basic-input>
+          <ui-basic-input [label]="PROPS.PHONE" [formControlName]="PROPS.PHONE" formControlErrors></ui-basic-input>
+        </div>
+
+        <mat-action-row>
+          <button *ngIf="c > 1" mat-raised-button color="warn" aria-label="delete icon" (click)="formArray.removeAt(i)">
+            <mat-icon>delete</mat-icon> Delete Item
+          </button>
+        </mat-action-row>
+      </mat-expansion-panel>
+      <button
+        *ngIf="last"
+        mat-raised-button
+        color="accent"
+        style="width: 100%"
+        (click)="insertItem(null, i + 1, { config: { expanded: true } })"
+      >
+        <mat-icon>add</mat-icon> Add Item
+      </button>
+    </ng-container>
+  </mat-accordion>
+</form>
