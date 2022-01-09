@@ -1,0 +1,24 @@
+<div [attr.id]="id" [ngStyle]="dps">
+  <h3>
+    <mat-icon>{{ iconName }}</mat-icon
+    >{{ header }}
+  </h3>
+  <ul>
+    <li *ngFor="let item of items">
+      <ng-content #upperContent></ng-content>
+      <ng-container [ngSwitch]="contentMode.upper">
+        <ng-container *ngSwitchCase="1">
+          <small>{{ title.jobTitle }} at {{ history.employer }}, {{ history.city }}</small>
+        </ng-container>
+        <ng-container *ngSwitchCase="2"> 2 </ng-container>
+        <ng-container *ngSwitchDefault>No content</ng-container>
+      </ng-container>
+      <br />
+      <small>
+        {{ history.startDate | date: 'MMMM, y' }} -
+        {{ history.endDate ? (history.endDate | date: 'MMMM, y') : 'present' }}
+      </small>
+      <p>{{ history.description }}</p>
+    </li>
+  </ul>
+</div>

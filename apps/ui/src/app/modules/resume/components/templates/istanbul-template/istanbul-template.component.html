@@ -1,42 +1,17 @@
-<!-- <ng-container *ngIf="{
+<mat-paginator
+  [length]="3"
+  [pageSize]="1"
+  [pageSizeOptions]="[1]"
+  [hidePageSize]="true"
+  [showFirstLastButtons]="false"
+  (page)="onPageChange($event)"
+  aria-label="Select page"
+>
+</mat-paginator>
 
-} as resume">
-  
-</ng-container> -->
-<!-- <div class="istanbul-template" [ngStyle]="dps">
-  <mat-grid-list cols="4" rowHeight="fit" gutterSize="80px">
-    <mat-grid-tile [rowspan]="1" [ngStyle]="dps"> #142A5C </mat-grid-tile>
-    <mat-grid-tile [colspan]="3" [rowspan]="1" [ngStyle]="dps"> #B7A0E8 </mat-grid-tile>
-    <mat-grid-tile [colspan]="3" [rowspan]="5" [ngStyle]="dps">
-      <div style="width: 100%; height: 100%">
-        <div id="professional-summary" [ngStyle]="dps">
-          <h3><mat-icon>person_outline</mat-icon>Profile</h3>
-          <span class="left-tile-content">{{ resumeValue.professionalSummary.text }}</span>
-        </div>
-        <div id="employment-history" [ngStyle]="dps">
-          <h3><mat-icon>work_outline</mat-icon>Employment History</h3>
-          <ul>
-            <li *ngFor="let history of resumeValue.employmentHistories">
-              <small>{{ history.jobTitle }} at {{ history.employer }}, {{ history.city }}</small>
-              <br />
-              <small>
-                {{ history.startDate | date: 'MMMM, y' }} -
-                {{ history.endDate ? (history.endDate | date: 'MMMM, y') : 'present' }}
-              </small>
-              <p>{{ history.description }}</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </mat-grid-tile>
-    <mat-grid-tile [style.background]="'red'"> #D9EDD9 </mat-grid-tile>
-  </mat-grid-list>
-</div> -->
-
-<!-- <canvas #canvasEl></canvas> -->
 <div class="istanbul-template" [ngStyle]="dps">
   <div class="container">
-    <header [ngStyle]="dps" fxFlexAlign="center" fxLayoutAlign="start" fxFlexFill>
+    <header contentPaging [ngStyle]="dps" fxFlexAlign="center" fxLayoutAlign="start" fxFlexFill>
       <div [ngStyle]="dps">
         <figure [ngStyle]="dps">
           <img [attr.src]="resumeValue.personalDetail.avatar.mediumUrl" />
@@ -49,15 +24,21 @@
     </header>
     <div class="content" fxLayout="row" fxFlexAlign="center" fxLayoutAlign="center">
       <section [ngStyle]="dps" fxFlex="75">
-        <div style="width: 100%; height: 100%">
-          <div id="professional-summary" [ngStyle]="dps">
+        <div>
+          <div contentPaging id="professional-summary" [ngStyle]="dps">
             <h3><mat-icon>person_outline</mat-icon>Profile</h3>
             <span class="left-tile-content">{{ resumeValue.professionalSummary.text }}</span>
           </div>
           <div id="employment-history" [ngStyle]="dps">
             <h3><mat-icon>work_outline</mat-icon>Employment History</h3>
-            <ul>
-              <li *ngFor="let history of resumeValue.employmentHistories">
+            <ul class="left-tile-content">
+              <li
+                contentPaging
+                *ngFor="
+                  let history of resumeValue?.employmentHistories?.employmentHistories ||
+                    resumeValue?.employmentHistories
+                "
+              >
                 <small>{{ history.jobTitle }} at {{ history.employer }}, {{ history.city }}</small>
                 <br />
                 <small>
@@ -68,9 +49,23 @@
               </li>
             </ul>
           </div>
+          <div id="education" [ngStyle]="dps">
+            <h3 contentPaging><mat-icon>school</mat-icon>Education</h3>
+            <ul class="left-tile-content">
+              <li contentPaging *ngFor="let education of resumeValue.educations">
+                <small>{{ education.degree }}, {{ education.school }}, {{ education.city }}</small>
+                <br />
+                <small>
+                  {{ education.startDate | date: 'MMMM, y' }} -
+                  {{ education.endDate ? (education.endDate | date: 'MMMM, y') : 'present' }}
+                </small>
+                <p>{{ education.description }}</p>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
-      <aside [ngStyle]="dps" fxFlex="25">aside</aside>
+      <aside contentPaging [ngStyle]="dps" fxFlex="25">aside</aside>
     </div>
   </div>
 </div>

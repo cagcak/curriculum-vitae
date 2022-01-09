@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, TemplateRef, ViewEncapsulation } from '@angular/core';
+import { PageEvent } from '@angular/material/paginator';
 import { ResumeFormValue } from '@ui/shared';
 import { ResumeTemplateAbstract } from '../../../abstracts';
 
@@ -11,6 +12,8 @@ import { ResumeTemplateAbstract } from '../../../abstracts';
 })
 export class IstanbulTemplateComponent implements OnInit {
   resumeValue: ResumeFormValue;
+
+  pageCurrent = 0;
 
   /** Template reference to the canvas element */
   // @ViewChild('canvasEl') canvasEl: ElementRef;
@@ -36,6 +39,19 @@ export class IstanbulTemplateComponent implements OnInit {
     console.log(this);
   }
 
+  onPageChange({ length, pageIndex, pageSize, previousPageIndex }: PageEvent) {
+    console.log(length, pageIndex, pageSize, previousPageIndex);
+  }
+
+  setCurrentPage(current: number) {
+    this.pageCurrent = current;
+    console.log(current);
+  }
+
+  getPageState([currentPage, templateRef]: [number, TemplateRef<any>]) {
+    console.log(templateRef, currentPage, templateRef?.elementRef);
+    return !!templateRef;
+  }
   // ngAfterViewInit() {
   // this.context = this.canvas.getContext('2d');
 

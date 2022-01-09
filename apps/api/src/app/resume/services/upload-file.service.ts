@@ -22,10 +22,11 @@ export class UploadFileServie {
       // const uuid = Math.random().toString(26).slice(2);
       const filename = `${fileUpload.filename}`;
 
-      // if (!FS.existsSync(localDir)) {
-      FS.rmdirSync(localDir, { recursive: true });
+      if (FS.existsSync(localDir)) {
+        FS.rmdirSync(localDir, { recursive: true });
+      }
+
       FS.mkdirSync(localDir, { recursive: true });
-      // }
 
       const versionalFilename = (bump: keyof typeof ImageVersion) => `${localDir}/${ImageVersion[bump]}_${filename}`;
 
